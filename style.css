@@ -1,0 +1,548 @@
+/* ===================================================================== */
+/* Reset and Base Styles */
+/* ===================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* ===================================================================== */
+  /* Layout Containers */
+  /* ===================================================================== */
+  .container {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 120px);
+  }
+  
+  .main-header, .main-footer {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .main-footer {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: none;
+  }
+  
+  /* ===================================================================== */
+  /* Header Styles */
+  /* ===================================================================== */
+  .header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    max-height: 50px;
+  }
+  
+  .main-nav ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .main-nav ul li a {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 12px;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+  }
+  
+  .main-nav ul li a:hover,
+  .main-nav ul li a.active {
+    background-color: #0073e6;
+    color: #fff;
+  }
+  
+  /* ===================================================================== */
+  /* Footer Styles */
+  /* ===================================================================== */
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-links li a {
+    font-size: 0.9rem;
+    color: #666;
+    transition: color 0.3s;
+  }
+  
+  .footer-links li a:hover {
+    color: #0073e6;
+  }
+  
+  /* ===================================================================== */
+  /* Login Page Styles */
+  /* ===================================================================== */
+  .login-container {
+    width: 100%;
+    height: calc(100vh - 80px);
+  }
+  
+  .left-section {
+    flex: 1;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .left-section img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .right-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .right-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #0073e6;
+  }
+  
+  .right-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #0073e6;
+  }
+  
+  .btn {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #005bb5;
+  }
+  
+  .error-msg {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #ffbaba;
+    color: #d8000c;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* ===================================================================== */
+  /* Upload Page Styles */
+  /* ===================================================================== */
+  .upload-container {
+    flex-direction: column;
+    padding: 40px;
+  }
+  
+  .upload-content {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .sidebar {
+    width: 280px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .profile {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #0073e6;
+  }
+  
+  .profile h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .sidebar-nav ul {
+    padding: 0;
+  }
+  
+  .sidebar-nav ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar-nav ul li a {
+    font-size: 1rem;
+    color: #333;
+    padding: 10px;
+    display: block;
+    transition: background 0.3s;
+    border-radius: 5px;
+  }
+  
+  .sidebar-nav ul li a:hover,
+  .sidebar-nav ul li a.active {
+    background-color: #0073e6;
+    color: #fff;
+  }
+  
+  .main-panel {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .panel-header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #0073e6;
+  }
+  
+  .panel-header p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  /* File Upload Form */
+  .upload-section {
+    margin-bottom: 40px;
+  }
+  
+  .upload-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .custom-file-upload {
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #005bb5;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #003f7f;
+  }
+  
+  #fileInput {
+    display: none;
+  }
+  
+  /* File Download Form */
+  .download-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .download-form select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border 0.3s;
+  }
+  
+  .download-form select:focus {
+    outline: none;
+    border-color: #0073e6;
+  }
+  
+  /* Recent Files List */
+  .file-details {
+    margin-top: 40px;
+  }
+  
+  .file-details h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0073e6;
+  }
+  
+  .file-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+  }
+  
+  .file-list li:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* ===================================================================== */
+  /* Popup Modal Styles */
+  /* ===================================================================== */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    width: 320px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+  
+  .popup-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  /* ===================================================================== */
+  /* Responsive Design */
+  /* ===================================================================== */
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+    }
+    .left-section, .right-section {
+      width: 100%;
+    }
+    .header-container, .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .main-nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .upload-content {
+      flex-direction: column;
+    }
+    .sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .header-container, .footer-container {
+      padding: 10px 20px;
+    }
+    .right-section {
+      padding: 20px;
+    }
+    .panel-header h1 {
+      font-size: 2rem;
+    }
+    .panel-header p {
+      font-size: 1rem;
+    }
+    .btn {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* ===================================================================== */
+  /* Extra Styling for a Modern Look (Additional 100+ Lines) */
+  /* ===================================================================== */
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .popup-content {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Shadows and transitions for cards */
+  .main-panel, .sidebar, .upload-content {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .main-panel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  
+  .sidebar:hover {
+    transform: translateX(3px);
+  }
+  
+  .file-list li {
+    transition: background-color 0.3s;
+  }
+  
+  /* Buttons */
+  .btn.primary {
+    background-color: #0073e6;
+  }
+  
+  .btn.primary:hover {
+    background-color: #005bb5;
+  }
+  
+  .btn.secondary {
+    background-color: #ff6f61;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #e55a4d;
+  }
+  
+  /* Custom File Upload Button Styling */
+  .custom-file-upload {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  /* Navigation underline effect */
+  .main-nav ul li a.active,
+  .main-nav ul li a:hover {
+    border-bottom: 2px solid #0073e6;
+  }
+  
+  /* Footer extra styling */
+  .main-footer {
+    background: #fff;
+    padding: 20px 40px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Adding more spacing for a cleaner layout */
+  header, footer, main {
+    margin-bottom: 20px;
+  }
+  
+  /* Miscellaneous Utility Classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+  
+  .mt-20 {
+    margin-top: 20px;
+  }
+  
+  /* End of Extra Styling */
+  /* ===================================================================== */
+  /* End of style.css (Approx 500 Lines) */
+  

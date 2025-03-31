@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File Management | Secure File</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Additional meta tags -->
+  <meta name="description" content="Secure File Management - Upload and Download files securely">
+  <meta name="author" content="Your Name">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <!-- Use logo from visuals folder -->
+        <img src="visuals/logo.png" alt="Secure File Logo">
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="upload.html" class="active">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="content">
+    <div class="container">
+      <!-- Sidebar: User Profile & Navigation -->
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="visuals/placeholder.png" alt="User Profile">
+          <h2 id="userSpan">User Name</h2>
+          <p>Member since 2023</p>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li><a href="#" class="active"><span class="icon">&#128190;</span> My Files</a></li>
+            <li><a href="#"><span class="icon">&#128196;</span> Recent</a></li>
+            <li><a href="#"><span class="icon">&#128736;</span> Settings</a></li>
+            <li><a href="#"><span class="icon">&#128274;</span> Security</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Panel: File Upload & Download -->
+      <section class="main-panel">
+        <div class="panel-header">
+          <h1>File Management</h1>
+          <p>Upload, download, and manage your files with ease.</p>
+        </div>
+
+        <!-- File Upload Section -->
+        <div class="upload-section">
+          <h2>Upload a File</h2>
+          <div class="upload-form">
+            <label for="fileInput" class="custom-file-upload">
+              <i class="fa fa-cloud-upload"></i> Choose a file
+            </label>
+            <input type="file" id="fileInput">
+            <button id="uploadBtn" class="btn primary">Upload File</button>
+          </div>
+        </div>
+
+        <!-- File Download Section -->
+        <div class="download-section">
+          <h2>Download a File</h2>
+          <div class="download-form">
+            <select id="fileSelect">
+              <option value="">Select a file...</option>
+              <option value="file1.pdf">file1.pdf</option>
+              <option value="file2.docx">file2.docx</option>
+              <option value="file3.jpg">file3.jpg</option>
+            </select>
+            <button id="downloadBtn" class="btn secondary">Download File</button>
+          </div>
+        </div>
+
+        <!-- Additional Panel for File Details (Dynamic Recent Files) -->
+        <div class="file-details">
+          <h2>Recent Files</h2>
+          <ul class="file-list" id="recentFilesList">
+            <!-- Recent files will be injected here dynamically -->
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Popup Modal for Upload/Download Success & Progress Loader -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <!-- Loader container hidden by default -->
+      <div id="loader" style="display:none; margin-bottom: 15px;">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <span class="close-btn" id="closePopup">&times;</span>
+      <p id="popupMessage"></p>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Secure File Management. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

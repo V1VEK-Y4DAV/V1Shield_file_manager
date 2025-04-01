@@ -2,7 +2,7 @@
 const validUsers = {
   "Vivek": "vivek@varanasi",
   "Shubham": "shubham_from_champaran",
-  "Peeyush": "Peeyush_from_agra"
+  "Peeyush": "peeyush_from_agra"
 };
 
 // Get login page elements
